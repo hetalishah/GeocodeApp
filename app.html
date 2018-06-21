@@ -1,0 +1,37 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="app.css">
+        <h1>Geocode</h1>
+    </head>
+    <body>
+        <form id="city">
+        <br></br>
+        City 1:
+        <input type="text" id="city1" name="city1" placeholder="Enter the first city" ></input><br></br>
+        City 2:
+        <input type="text" id="city2" name="city2" placeholder="Enter the second city"> 
+        </input><br></br>
+        <button type = "button" id="submit" onClick=geocode() >Submit</button>
+        </form> 
+
+        <script>
+            var input = document.getElementById("city");
+            input.addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("submit").click();
+                }
+            });
+            </script>
+
+        <br></br>
+
+        <div id="FormattedAddress1"></div>
+        <div id="FormattedAddress2"></div>
+        <div id="distance"></div>
+        <div id="missing"></div>
+        <div id="error1"></div>
+        <div id="error2"></div>
+        <script src="app.js"></script>  
+    </body>
+</html>
